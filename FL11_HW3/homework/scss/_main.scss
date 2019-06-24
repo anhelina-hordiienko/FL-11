@@ -18,6 +18,11 @@ body {
     width: $width;
     height: $height;
 }
+%flex-Center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .header_heading, button, .section_text, .section_card_heading, .section_banner_heading {
     font-family: $headersFont;
 }
@@ -93,9 +98,7 @@ main {
         }
     }
     .section_card_wrap {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        @extend %flex-Center;
     }
     .section_card {
         width: 496px;
@@ -176,9 +179,7 @@ footer {
     position: relative;
     z-index: -1;
     .footer-wrap {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        @extend %flex-Center;
         & > * {
             width: 496px;
             margin: 0 12px 20px;
@@ -189,9 +190,7 @@ footer {
         }
         .footer-cr {
             font-size: 20px;
-            justify-content: flex-end;
-            
-            
+            justify-content: flex-end;   
         }
         .footer_text {
             font-size: 17.5px;
