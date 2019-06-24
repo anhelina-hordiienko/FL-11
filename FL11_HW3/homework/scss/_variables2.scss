@@ -12,3 +12,8 @@ $textColor: darken(#FFFFFF, 20%);
 $backgroundColor2: #922B54;
 $bodyBackground: #21232E;
 
+$fontColors: (
+header: $headersColor,
+button: $buttonFontColor,
+text: $textColor
+);
