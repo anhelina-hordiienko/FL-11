@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    min-width: 900px;
+    margin: 0px!important;
+}
+header {
+    background: url("../img/sample2.jpg") center top/cover;
+    min-height: 550px;
+}

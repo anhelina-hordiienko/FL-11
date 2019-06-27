@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CSS Layouts</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <span class="logo">Lorem & ipsum</span>
+            <ul class="user-menu">
+                <li>
+                    <a href="#">Login</a>
+                </li>
+                <li>
+                    <a href="#">Sign up</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="heading">
+            <h1>Lorem <span>&</span> ipsum</h1>
+            <p>An original brand since 1965</p>
+        </div>
+
+        <nav>
+            <a href="#">Careers</a>
+            <a href="#">About</a>
+            <a href="#">Show more</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div>
+                <p>Lorem ipsum dolor, consectetuer adipiscing. Aenean <b>commodo ligula</b> eget dolor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+            </div>
+        </section>
+
+        <section class="featured-articles">
+            <h2>Read some of our <b>featured articles</b></h2>
+            <article>
+                <div class="article-img">
+                    <img src="./img/sample-1.jpg" alt="People discussing diagrams">
+                    <a href="#" class="likes-counter"><span class="likes-amount">154</span> &#9829;</a>
+                    <p class="date-and-country"><time datetime="07-18">July 18</time> Spain</p>
+                </div>
+                <div class="article-text">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus.</p>
+                </div>
+            </article>
+            <article>
+                <div class="article-img">
+                    <img src="./img/sample-2.jpg" alt="Vestas building">
+                    <a href="#" class="likes-counter"><span class="likes-amount">172</span> &#9829;</a>
+                    <p class="date-and-country"><time datetime="01-15">January 15</time> South France</p>
+                </div>
+                <div class="article-text">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="galery">
+            <section class="galery-item greece">
+                <a href="#" class="likes-counter"><span class="likes-amount">10</span> &#9829;</a>
+                <a>Explore</a>>
+                <p class="date-and-country"><time datetime="01-18">January 18</time> Greece</p>
+            </section>
+            <section class="galery-item italy">
+                <a href="#" class="likes-counter"><span class="likes-amount">35</span> &#9829;</a>
+                <a>Explore</a>>
+                <p class="date-and-country"><time datetime="06-18">June 18</time> Italy</p>
+            </section>
+            <section class="galery-item usa">
+                <a href="#" class="likes-counter"><span class="likes-amount">199</span> &#9829;</a>
+                <a>Explore</a>>
+                <p class="date-and-country"><time datetime="12-11">December 11</time> USA</p>
+            </section>
+            <section class="galery-item germany">
+                <a href="#" class="likes-counter"><span class="likes-amount">88</span> &#9829;</a>
+                <a>Explore</a>>
+                <p class="date-and-country"><time datetime="05-25">May 25</time> Germany</p>
+            </section>
+            <a href="#" id="load">Load news</a>
+        </section>
+
+        <section class="subscription">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer</p>
+            <form action="#" method="POST">
+                <h2>Subscribe to our <b>newsletter</b></h2>
+                <input type="email" name="email" placeholder="Enter your e-mail">
+                <input type="submit" value="Subscribe">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2019 Epam</p>
+        <ul class="footer-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Vacancies</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
