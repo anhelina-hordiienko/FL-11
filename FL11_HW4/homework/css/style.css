@@ -10,7 +10,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     width: 100%;
     min-width: 900px;
-    max-width: 2400px;
+    /* max-width: 2400px; */
     margin: 0px!important;
 }
 a {
@@ -121,6 +121,64 @@ header:after{
     padding-left: 4.2%;
     padding-right: 15%;
     font-size: 1.35rem;
+}
+
+.featured-articles {
+    padding: 0 4.2% 4.2%;
+    text-align: center;
+    background-color: #F3F3F3;
+}
+.featured-articles h2 {
+    font-size: 1.84rem;
+    font-weight: 400;
+    margin-top: -2%;
+    margin-bottom: 3.3%;
+}
+article {
+    display: flex;
+}
+ .article-img {
+    flex-basis: 50%;
+    margin-bottom: 1.5%;
+    height: 24.7vw;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+.article-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
+article:nth-of-type(even) .article-text {
+    order: 1;
+}
+article:nth-of-type(even) .article-img {
+    order: 2;
+}
+.article-text p {
+    font-size: 1.07rem;
+    padding-left: 14%;
+}
+article:nth-of-type(even) .article-text p {
+    padding-right: 13%;
+    padding-left: 0;
+}
+.likes-counter {
+    position: absolute;
+    right: 3.7%;
+    top: 7%;
+    border: 4px solid white;
+    padding: 0.4rem 0.9rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.date-and-country {
+    position: absolute;
+    left: 4%;
+    bottom: 7%;
+    font-size: 1.1rem
 }
 
 
