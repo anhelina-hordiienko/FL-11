@@ -2,19 +2,12 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;;
-}
-
 body {
-  font-family: roboto;
+  font-family: 'Roboto';
+  font-weight: 300;
 }
 .post-1 {
-	background: #B71757;
+  background: #B71757;
 }
 .post-2 {
 	background: #0D7E71;
@@ -30,3 +23,196 @@ body {
 }
 
 /* Your styles go here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 18px;
+}
+body {
+  width: 100%;
+  margin: 0px!important;
+  background-color: #0b192f;
+  padding: 0 1% 5px;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+header {
+  background-color: #162b4d;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.6% 0 1.8%;
+}
+.logo {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.logo span {
+  color: #d12767;
+}
+.nav-toggle {
+  display: none;
+}
+nav a {
+  display: inline-block;
+  color: #fff;
+  padding: 50px 25px;
+  font-size: 1.2rem;
+}
+nav a:hover {
+  background-color: rgba(184, 184, 184, 0.1);
+}
+
+.center-part {
+  display: flex;
+  flex-wrap: wrap;
+}
+aside {
+  width: 23.57%;
+  flex-grow: 1;
+}
+main {
+  margin-right: 2.14%;
+  width: 74.29%;
+  flex-grow: 1;
+}
+.post {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post > * {
+  width: 50%;
+}
+.post:last-of-type > * {
+  width: 100%;
+}
+img {
+  width: 100%;
+  position: relative;
+}
+.post-content {
+  display: flex;
+  position: relative;
+}
+.post-content .month {
+  display: block;
+}
+
+aside article {
+  margin-bottom: 25px;
+  background-color: #fff;
+}
+aside article:last-of-type {
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: #162b4d;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .post:nth-of-type(even) img {
+    order: 2;
+  }
+  .post:nth-of-type(even) .post-content {
+    order: 1;
+  }
+  .post:nth-of-type(even) .post-text {
+    order: 2;
+  }
+  .post:nth-of-type(even) time {
+    order: 1;
+  }
+
+  .post-1 .post-content:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #B71757;
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  .post-2 {
+    background: #0D7E71;
+  }
+  .post-3 {
+    background: #b1660e;
+  }
+  .post-4 {
+    background: #d12767;
+  }
+  .post-5 {
+    background: #2d95bb;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0;
+    flex-direction: column;
+  }
+  nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    order: 1;
+    margin-top: 20px;
+  }
+  .logo {
+    order: 2;
+    font-size: 2rem;
+    margin: 50px 0;
+  }
+  .post > * {
+    width: 100%;
+  }
+  aside {
+    width: 39.3%;
+  }
+  main {
+    margin-right: 2.7%;
+    width: 56%;
+  }
+  .post-content {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    margin-right: 0;
+  }
+  aside {
+    width: 100%;
+  }
+  main {
+    margin-right: 0;
+    width: 100%;
+  }
+  footer {
+    margin-top: 42px;
+  }
+}
