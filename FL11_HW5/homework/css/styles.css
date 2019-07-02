@@ -69,6 +69,7 @@ nav a {
   color: #fff;
   padding: 50px 25px;
   font-size: 1.2rem;
+  transition: 1.5s;
 }
 nav a:hover {
   background-color: rgba(184, 184, 184, 0.1);
@@ -97,9 +98,13 @@ main {
 .post:last-of-type > * {
   width: 100%;
 }
+.img-container {
+  display: inline-block;
+  position: relative;
+}
 img {
   width: 100%;
-  position: relative;
+  height: 100%;
 }
 .post-content {
   display: flex;
@@ -125,7 +130,7 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  .post:nth-of-type(even) img {
+  .post:nth-of-type(even) .img-container {
     order: 2;
   }
   .post:nth-of-type(even) .post-content {
@@ -137,8 +142,7 @@ footer {
   .post:nth-of-type(even) time {
     order: 1;
   }
-
-  .post-1 .post-content:hover::after{
+  .post .img-container::after, .post .post-content::after{
     content: '';
     display: block;
     width: 100%;
@@ -146,20 +150,23 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    background: #B71757;
-    opacity: 0.4;
     cursor: pointer;
+    opacity: 0.5;
+    transition: 1.5s;
   }
-  .post-2 {
+  .post-1 .img-container:hover::after, .post-1 .post-content:hover::after {
+    background: #B71757;
+  }
+  .post-2 .img-container:hover::after, .post-2 .post-content:hover::after {
     background: #0D7E71;
   }
-  .post-3 {
+  .post-3 .img-container:hover::after, .post-3 .post-content:hover::after {
     background: #b1660e;
   }
-  .post-4 {
+  .post-4 .img-container:hover::after, .post-4 .post-content:hover::after {
     background: #d12767;
   }
-  .post-5 {
+  .post-5 .img-container:hover::after, .post-5 .post-content:hover::after {
     background: #2d95bb;
   }
 }
