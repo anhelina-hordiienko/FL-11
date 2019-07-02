@@ -109,9 +109,32 @@ img {
 .post-content {
   display: flex;
   position: relative;
+  color: #fff;
+  padding: 1% 1% 4% 4%;
 }
 .post-content .month {
   display: block;
+  font-size: 1.5rem;
+}
+time {
+  font-weight: 100;
+  font-size: 3rem;
+  opacity: 0.5;
+  margin-left: auto;
+}
+.post-text h2 {
+  font-size: 3.2rem;
+  font-weight: 100;
+  line-height: 1;
+  padding-top: 10%;
+  padding-bottom: 8%;
+}
+.post-text {
+  flex-basis: 73%;
+}
+.post-text p {
+  opacity: 0.8;
+  line-height: 1.5;
 }
 
 aside article {
@@ -129,12 +152,21 @@ footer {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1000px) {
+  time {
+    font-size: 2rem;
+  }
+  .post-text h2 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 769px) {
   .post:nth-of-type(even) .img-container {
     order: 2;
   }
   .post:nth-of-type(even) .post-content {
     order: 1;
+    padding: 1% 4% 4% 1%;
   }
   .post:nth-of-type(even) .post-text {
     order: 2;
@@ -142,6 +174,21 @@ footer {
   .post:nth-of-type(even) time {
     order: 1;
   }
+  .post:nth-of-type(even) time {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .post:nth-of-type(even) .post-content {
+    text-align: right;
+  }
+  .post:last-of-type .post-text {
+    flex-basis: 90%;
+  }
+  .post:last-of-type h2 {
+    padding-top: 4%;
+    padding-bottom: 3%;
+  }
+
   .post .img-container::after, .post .post-content::after{
     content: '';
     display: block;
@@ -202,6 +249,17 @@ footer {
   }
   .post-content {
     flex-direction: column;
+    padding: 0 8% 4% 8%;
+  }
+  .post-text p {
+    font-size: 0.8rem;
+  }
+  .post-text h2 {
+    font-size: 2.6rem;
+  }
+  time {
+    margin: 12% auto 2%;
+    font-size: 2.8rem;
   }
   footer {
     flex-direction: column;
