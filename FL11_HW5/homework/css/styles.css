@@ -133,16 +133,29 @@ time {
   flex-basis: 73%;
 }
 .post-text p {
-  opacity: 0.8;
+  opacity: 0.7;
   line-height: 1.5;
 }
 
 aside article {
   margin-bottom: 25px;
   background-color: #fff;
+  padding-bottom: 13%;
 }
 aside article:last-of-type {
   margin-bottom: 0;
+}
+article h3 {
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin: 10% 11% 4%;
+  line-height: 1.1;
+}
+article p {
+  margin: 0 11%;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.7;
 }
 
 footer {
@@ -150,6 +163,13 @@ footer {
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
+  color: #fff;
+  padding: 2.5%;
+  font-weight: 100;
+  line-height: 1.5;
+}
+footer p {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 1000px) {
@@ -158,6 +178,9 @@ footer {
   }
   .post-text h2 {
     font-size: 2.4rem;
+  }
+  footer .copyright {
+    flex-basis: 60%;
   }
 }
 @media screen and (min-width: 769px) {
@@ -188,7 +211,6 @@ footer {
     padding-top: 4%;
     padding-bottom: 3%;
   }
-
   .post .img-container::after, .post .post-content::after{
     content: '';
     display: block;
@@ -261,8 +283,18 @@ footer {
     margin: 12% auto 2%;
     font-size: 2.8rem;
   }
+  article h3 {
+    font-size: 1.42rem;
+  }
+  article p {
+    font-size: 0.75rem;
+  }
   footer {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
   }
 }
 
@@ -279,5 +311,17 @@ footer {
   }
   footer {
     margin-top: 42px;
+  }
+  aside article {
+    padding-bottom: 8%;
+  }
+  article h3 {
+    margin: 6% 7% 3%;
+  }
+  article p {
+    margin: 0 7%;
+  }
+  footer {
+    padding: 5% 2%;
   }
 }
