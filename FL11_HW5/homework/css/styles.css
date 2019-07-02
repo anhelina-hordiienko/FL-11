@@ -183,6 +183,7 @@ footer p {
     flex-basis: 60%;
   }
 }
+
 @media screen and (min-width: 769px) {
   .post:nth-of-type(even) .img-container {
     order: 2;
@@ -239,6 +240,7 @@ footer p {
     background: #2d95bb;
   }
 }
+
 @media screen and (max-width: 768px) {
   header {
     padding: 0;
