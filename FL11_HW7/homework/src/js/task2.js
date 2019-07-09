@@ -44,7 +44,7 @@ if (!startGame) {
       // update data for new round
       if (shouldContinuePlay) {
         roundNumber++;
-        for (let prizeAttemptNumber = 0; prizeAttemptNumber < prizeForGuessAtAttemptForRound.length; prizeAttemptNumber++) {
+        for (let prizeAttemptNumber=0; prizeAttemptNumber<prizeForGuessAtAttemptForRound.length; prizeAttemptNumber++) {
           prizeForGuessAtAttemptForRound[prizeAttemptNumber] = prizeForGuessAtAttemptForRound[prizeAttemptNumber] * 2;
         }
       } else {
