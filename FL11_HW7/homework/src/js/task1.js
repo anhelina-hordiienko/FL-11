@@ -14,28 +14,30 @@ if (!email) {
     alert('Wrong password.');
   } else if (email === 'admin@gmail.com' && password !== 'AdminPass') {
     alert('Wrong password.');
-  }
-
-  let isPassReset = confirm('Do you want to change your password?');
-  if (!isPassReset) {
-    alert('You have failed the change.')
   } else {
-    const oldPass = prompt('Please enter your current password.');
-    if (!oldPass) {
-      alert('Canceled.');
-    } else if ((email === 'user@gmail.com' && password !== 'UserPass') || (email === 'admin@gmail.com' && password !== 'AdminPass')) {
-      alert('Wrong password.');
+    let isPassReset = confirm('Do you want to change your password?');
+    if (!isPassReset) {
+      alert('You have failed the change.')
     } else {
-      const newPass = prompt('Please enter a new password.');
-      const minPassLength = 5;
-      if (newPass.length < minPassLength) {
-        alert('It\'s too short password. Sorry.');
+      const oldPass = prompt('Please enter your current password.');
+      if (!oldPass) {
+        alert('Canceled.');
+      } else if (email === 'user@gmail.com' && oldPass !== 'UserPass') {
+        alert('Wrong password.');
+      } else if (email === 'admin@gmail.com' && oldPass !== 'AdminPass') {
+        alert('Wrong password.');
       } else {
-        const newPassRepeat = prompt('Please enter your new password again.');
-        if (newPassRepeat !== newPass) {
-          alert('You wrote the wrong password.');
+        const newPass = prompt('Please enter a new password.');
+        const minPassLength = 5;
+        if (newPass.length < minPassLength) {
+          alert('It\'s too short password. Sorry.');
         } else {
-          alert('You have successfully changed your password.');
+          const newPassRepeat = prompt('Please enter your new password again.');
+          if (newPassRepeat !== newPass) {
+            alert('You wrote the wrong password.');
+          } else {
+            alert('You have successfully changed your password.');
+          }
         }
       }
     }
