@@ -14,7 +14,7 @@ if (!startGame) {
   do {
     const roundMaxRandomValue = initialMaxRandomValue + roundNumber * roundRandomMultiplier;
     // need to add 1 to include top value
-    const randomValue = Math.floor(Math.random() * roundMaxRandomValue) + one;
+    const randomValue = Math.floor(Math.random() * (roundMaxRandomValue + one));
     let isWin = false;
 
     for (let currentAttemptNumber = 0; currentAttemptNumber < maxNumberOfAttempts; currentAttemptNumber++) {
