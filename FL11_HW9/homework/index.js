@@ -72,7 +72,7 @@ function daysBetween(date1, date2) {
 function getAmountOfAdultPeople(data) {
   const daysOfEighteenYears = 6570;
   const adults = filterArray(data, (person) => {
-    daysBetween(new Date(person[' birthday ']), new Date()) > daysOfEighteenYears
+    return daysBetween(new Date(person[' birthday ']), new Date()) > daysOfEighteenYears;
   });
   return adults.length;
 }
@@ -80,7 +80,7 @@ function getAmountOfAdultPeople(data) {
 //task9
 function keys(object) {
   const keysArray = [];
-  for(let key in object) {
+  for (let key in object) {
     if (object.hasOwnProperty(key)) {
       keysArray.push(key);
     }
@@ -91,7 +91,7 @@ function keys(object) {
 //task10
 function values(object) {
   const valuesArray = [];
-  for(let key in object) {
+  for (let key in object) {
     if (object.hasOwnProperty(key)) {
       valuesArray.push(object[key]);
     }
