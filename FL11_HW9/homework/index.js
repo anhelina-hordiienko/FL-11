@@ -1,5 +1,5 @@
 // task 0
-function getNumbers (inputString) {
+function getNumbers(inputString) {
   let returns = [];
   for (let letter of inputString) {
     const returnsInput = parseInt(letter, 10);
@@ -31,8 +31,22 @@ function executeforEach(array, callback) {
   }
 }
 
-// //task3
-function mapArray(array2, callback2) {
+//task3
+function mapArray(array, callback) {
   let transformedArray = [];
-  transformedArray.push(executeforEach(array2, callback2));
+  executeforEach(array, function (item) {
+    transformedArray.push(callback(item));
+  });
+  return transformedArray;
+}
+
+//task4
+function filterArray(array, callback) {
+  let filteredArray = [];
+  executeforEach(array, function (item) {
+    if (callback(item)) {
+      filteredArray.push(item);
+    }
+  });
+  return filteredArray;
 }
