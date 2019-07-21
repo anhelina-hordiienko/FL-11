@@ -21,6 +21,12 @@ document.getElementById('add').addEventListener('click', function(e) {
   }
 });
 
+function removeItem() {
+  const item = this.parentNode;
+  const parent = item.parentNode;
+  parent.removeChild(item);
+}
+
 function addItemToDo(text) {
   const li = document.createElement('li');
 
@@ -38,6 +44,8 @@ function addItemToDo(text) {
   const trash = document.createElement('i');
   trash.className = 'material-icons trash';
   trash.innerText = 'delete';
+  trash.addEventListener('click', removeItem);
+
   li.appendChild(label);
   li.appendChild(edit);
   li.appendChild(trash);
