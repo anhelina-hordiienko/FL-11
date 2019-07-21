@@ -10,11 +10,12 @@ function notEmpty(e) {
   }
 }
 
-document.getElementById('add').addEventListener('click', function() {
+document.getElementById('add').addEventListener('click', function(e) {
   let value = document.getElementById('item').value;
   if (value) {
     addItemToDo(value);
     document.getElementById('item').value = '';
+    e.target.classList.add('md-inactive');
   } else {
     alert('Plese, enter some value in the text field.');
   }
