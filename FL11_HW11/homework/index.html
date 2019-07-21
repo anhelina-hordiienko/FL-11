@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework 11 - TODO Cat List</title>
   <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
+
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div class="wrapper">
+      <h1>TODO Cat List</h1>
+      <div class="add-item-field">
+        <input type="text" name="add-item" id="item" placeholder="Add new action" onkeyup="notEmpty(event)">
+        <i class="material-icons md-48 md-inactive" id="add">add_box</i>
+      </div>
+        <ul id="toDoList">
+          <li>
+            <label><input type="checkbox" name="affairs"><span>Find the cat</span></label>
+            <i class="material-icons">edit</i>
+            <i class="material-icons trash">delete</i>
+          </li>
+          <li>
+            <label><input type="checkbox" name="affairs" disabled><span>Prepare cat's carry</span></label>
+            <i class="material-icons">edit</i>
+            <i class="material-icons trash">delete</i>
+          </li>
+          <li>
+            <label><input type="checkbox" name="affairs"><span>Bathe a cat</span></label>
+            <i class="material-icons">edit</i>
+            <i class="material-icons trash">delete</i>
+          </li>
+        </ul>
+    </div>
+  </div>
 
   <script src="./src/app.js"></script>
 </body>
+
 </html>
