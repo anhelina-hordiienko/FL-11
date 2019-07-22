@@ -34,6 +34,39 @@ function disableInput() {
   this.className ='checked disabled';
 }
 
+//Edit task
+function editTask() {
+  const pencil = this;
+  const li = this.parentNode;
+  const label = li.firstChild;
+  const trash = this.nextElementSibling;
+  trash.style.display = 'none';
+
+  const save = document.createElement('i');
+  save.classList.add('material-icons');
+  save.innerText = 'save';
+  li.replaceChild(save, this);
+
+  const editField = document.createElement('input');
+  editField.setAttribute('type', 'text');
+  editField.setAttribute('id', 'editField');
+  const taskValueBeforeEdit = label.lastChild.innerText;
+  editField.setAttribute('value', taskValueBeforeEdit);
+  li.replaceChild(editField, label);
+  
+  save.addEventListener('click', function() {
+    let taskValueAfterEdit = editField.value;
+    if(taskValueAfterEdit) {
+      trash.style.display = 'inline-block';
+      li.replaceChild(pencil, save);
+      label.lastChild.innerText = taskValueAfterEdit;
+      li.replaceChild(label, editField);
+    } else {
+      alert('Plese, enter some value in the text field.');
+    }
+  });
+}
+
 //Add <li>, when add button is clicked
 function addItemToDo(text) {
   const li = document.createElement('li');
@@ -51,6 +84,7 @@ function addItemToDo(text) {
   const edit = document.createElement('i');
   edit.classList.add('material-icons');
   edit.innerText = 'edit';
+  edit.addEventListener('click', editTask);
 
   const trash = document.createElement('i');
   trash.className = 'material-icons trash';

@@ -54,6 +54,10 @@ h1 {
 .material-icons.md-48 { 
   font-size: 48px; 
 }
+label {
+  display: flex;
+  align-items: center;
+}
 input[type="checkbox"] {
   width: 25px;
   height: 25px;
@@ -99,4 +103,11 @@ li span {
 }
 .trash {
   margin-left: auto;
+}
+#editField {
+  height: 40px;
+  width: 40%;
+  margin: 3px 15px 7px 0;
+  text-indent: 20px;
+  outline: none;
 }
