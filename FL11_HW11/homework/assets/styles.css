@@ -66,10 +66,10 @@ input[type="checkbox"] {
 input[type="checkbox"]:hover {
   filter: brightness(90%);
 }
-input[type="checkbox"]:checked {
+input[type="checkbox"].checked {
   background: rgb(255, 255, 255);;
 }
-input[type="checkbox"]:disabled {
+input[type="checkbox"].disabled {
   background: rgba(0, 0, 0, 0.26);
   pointer-events: none;
 }
@@ -85,7 +85,7 @@ input[type="checkbox"]:after {
   transform: rotate(45deg);
   display: none;
 }
-input[type="checkbox"]:checked:after {
+input[type="checkbox"].checked:after {
   display: block;
 }
 li {

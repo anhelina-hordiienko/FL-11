@@ -1,6 +1,7 @@
 let rootNode = document.getElementById('root');
 
 // Your code goes here
+// Enabling add button, when input is not empty
 function notEmpty(e) {
   const button = e.target.nextElementSibling;
   if(e.target.value) {
@@ -21,19 +22,29 @@ document.getElementById('add').addEventListener('click', function(e) {
   }
 });
 
+//Delete <li>, when trash icon is clicked
 function removeItem() {
   const item = this.parentNode;
   const parent = item.parentNode;
   parent.removeChild(item);
 }
 
+//Disabling checkbox on click
+function disableInput() {
+  this.className ='checked disabled';
+}
+
+//Add <li>, when add button is clicked
 function addItemToDo(text) {
   const li = document.createElement('li');
 
   const label = document.createElement('label');
-  label.innerHTML = '<input type="checkbox" name="affairs"></input>';
+  const input = document.createElement('input');
+  input.setAttribute('type', 'checkbox');
+  input.addEventListener('click', disableInput);
   const span = document.createElement('span');
   span.innerText = text;
+  label.appendChild(input);
   label.appendChild(span);
 
 
