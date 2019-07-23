@@ -1,6 +1,28 @@
 let rootNode = document.getElementById('root');
-
 // Your code goes here
+const arrowOfLi = document.getElementsByTagName('li');
+const notification = document.createElement('p');
+notification.innerText = 'Maximum item per list are created';
+const header = document.getElementsByTagName('h1')[0];
+const itemsLimit = 10;
+//Chek if maximum items per list are created
+function blockAddingItemToList() {
+  if(arrowOfLi.length === itemsLimit) {
+    notification.classList.add('notification');
+    header.parentNode.insertBefore(notification, header.nextElementSibling);
+    document.getElementById('item').setAttribute('disabled', 'disabled');
+    document.getElementById('add').style.pointerEvents = 'none';
+  }
+}
+
+function unblockAddingItemToList() {
+  if(arrowOfLi.length < itemsLimit) {
+    notification.remove();
+    document.getElementById('item').removeAttribute('disabled');
+    document.getElementById('add').style.removeProperty('pointer-events');
+  }
+}
+
 // Enabling add button, when input is not empty
 function notEmpty(e) {
   const button = e.target.nextElementSibling;
@@ -13,10 +35,11 @@ function notEmpty(e) {
 
 document.getElementById('add').addEventListener('click', function(e) {
   let value = document.getElementById('item').value;
-  if (value) {
+    if (value) {
     addItemToDo(value);
     document.getElementById('item').value = '';
     e.target.classList.add('md-inactive');
+    blockAddingItemToList();
   } else {
     alert('Plese, enter some value in the text field.');
   }
@@ -90,6 +113,7 @@ function addItemToDo(text) {
   trash.className = 'material-icons trash';
   trash.innerText = 'delete';
   trash.addEventListener('click', removeItem);
+  trash.addEventListener('click', unblockAddingItemToList);
 
   li.appendChild(label);
   li.appendChild(edit);
