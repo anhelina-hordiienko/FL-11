@@ -1,5 +1,5 @@
 let rootNode = document.getElementById('root');
-// Your code goes here
+
 const arrowOfLi = document.getElementsByTagName('li');
 const notification = document.createElement('p');
 notification.innerText = 'Maximum item per list are created';
